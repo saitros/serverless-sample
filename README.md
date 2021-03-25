@@ -143,3 +143,7 @@ To [override the default config](https://eslint.org/docs/user-guide/configuring)
 ---
 
 This repo is maintained by [Anomaly Innovations](https://anoma.ly); makers of [Seed](https://seed.run) and [Serverless Stack](https://serverless-stack.com).
+
+### Doing
+
+Do not need local test. Don't use mocks

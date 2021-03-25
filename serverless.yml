@@ -12,9 +12,9 @@ plugins:
 
 provider:
   name: aws
-  runtime: nodejs10.x
+  runtime: nodejs12.x
   stage: dev
-  region: asia-pacific
+  region: ap-northeast-2
   # To load environment variables externally
   # rename env.example to .env and uncomment
   # the following line. Also, make sure to not
@@ -28,14 +28,14 @@ provider:
   iamRoleStatements:
     - Effect: Allow
       Action:
-	    - dynamodb:Scan
-		- dynamodb:Query
-		- dynamodb:GetItem
-		- dynamodb:PutItem
-		- dynamodb:UpdateItem
-		- dynamodb:DeleteItem
-		- dynamodb:DescribeTable
-	  Resource: "arn:aws:dynamodb:asia-pacific:*:*"
+        - dynamodb:Scan
+        - dynamodb:Query
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
+        - dynamodb:DescribeTable
+      Resource: "arn:aws:dynamodb:asia-pacific:*:*"
 
 
 functions:
@@ -46,9 +46,9 @@ functions:
           path: hello
           method: get
 
-	create:
-		handler: create.main
-		envents:
-			-http:
-				path: notes
-				method: post
+    create:
+        handler: create.main
+        envents:
+            -http:
+                path: notes
+                method: post

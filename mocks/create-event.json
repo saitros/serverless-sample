@@ -1,4 +1,9 @@
 {
 	"body": "{\"content\":\"hellow world\",\"attachment\":\"hello.jpg\"}"
+	"requstContext": {
+		"identity": {
+			"cognitoIdentityId": "USER-SUB-1234"
+		}
+	}
 }
 
