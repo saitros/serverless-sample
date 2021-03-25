@@ -147,3 +147,4 @@ This repo is maintained by [Anomaly Innovations](https://anoma.ly); makers of [S
 ### Doing
 
 Do not need local test. Don't use mocks
+Use postman for deploy test.
