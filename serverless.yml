@@ -12,7 +12,7 @@ plugins:
 
 provider:
   name: aws
-  runtime: nodejs10.x
+  runtime: nodejs12.x
   stage: dev
   region: ap-northeast-2
 
@@ -39,7 +39,7 @@ provider:
       Resource: "arn:aws:dynamodb:asia-pacific:*:*"
 
 
-aunctions:
+functions:
   hello:
     handler: handler.hello
     events:
@@ -50,6 +50,7 @@ aunctions:
     create:
         handler: create.main
         envents:
-          -http:
-            path: notes
-            method: post
+            -http:
+                path: notes
+                method: post
+                authorizer: aws_iam
